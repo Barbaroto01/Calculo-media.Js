@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #5b86e5, #36d1dc);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 320px;
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.inputs input {
+  width: 80%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+button {
+  background-color: #5b86e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #36d1dc;
+  transform: scale(1.05);
+}
+
+button.limpar {
+  background-color: #ff4d4d;
+}
+
+button.limpar:hover {
+  background-color: #ff6666;
+}
+
+#resultado {
+  margin-top: 25px;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.3s;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Quando o resultado aparece */
+#resultado.mostrar {
+  opacity: 1;
+  transform: scale(1.1);
+}
