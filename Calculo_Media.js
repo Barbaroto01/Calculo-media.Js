@@ -4,7 +4,6 @@ function calcularMedia() {
   const n3 = parseFloat(document.getElementById("nota3").value);
   const resultado = document.getElementById("resultado");
 
-  // Remove classe de animação anterior
   resultado.classList.remove("mostrar");
 
   if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
@@ -16,11 +15,11 @@ function calcularMedia() {
 
   const media = (n1 + n2 + n3) / 3;
 
-  resultado.textContent = `A média é ${media.toFixed(2)}`;
-
   if (media >= 7) {
+    resultado.textContent = `Média: ${media.toFixed(2)} — APROVADO`;
     resultado.style.color = "green";
   } else {
+    resultado.textContent = `Média: ${media.toFixed(2)} — REPROVADO`;
     resultado.style.color = "red";
   }
 
