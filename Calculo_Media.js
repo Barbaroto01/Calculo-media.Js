@@ -6,6 +6,7 @@ function calcularMedia() {
 
   resultado.classList.remove("mostrar");
 
+  // validação
   if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
     resultado.textContent = "Por favor, preencha todas as notas!";
     resultado.style.color = "red";
@@ -15,6 +16,7 @@ function calcularMedia() {
 
   const media = (n1 + n2 + n3) / 3;
 
+  // resultado com aprovado ou não
   if (media >= 7) {
     resultado.textContent = `Média: ${media.toFixed(2)} — APROVADO`;
     resultado.style.color = "green";
