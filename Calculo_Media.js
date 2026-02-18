@@ -18,10 +18,10 @@ function calcularMedia() {
 
   // resultado com aprovado ou não
   if (media >= 7) {
-    resultado.textContent = `Média: ${media.toFixed(2)} — APROVADO`;
+    resultado.textContent = `Média: ${media.toFixed(2)} / APROVADO`;
     resultado.style.color = "green";
   } else {
-    resultado.textContent = `Média: ${media.toFixed(2)} — REPROVADO`;
+    resultado.textContent = `Média: ${media.toFixed(2)} / REPROVADO`;
     resultado.style.color = "red";
   }
 
